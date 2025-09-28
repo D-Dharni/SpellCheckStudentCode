@@ -27,7 +27,7 @@ public class SpellCheck {
 
         // Loop through each word in dictionary
 
-            // Calculate value using formula: value = (value*29) + ASCII value
+            // Calculate value using formula: value = (value * 29) + ASCII value
 
             // Modulo by the number of shelves to put number back in range
 
