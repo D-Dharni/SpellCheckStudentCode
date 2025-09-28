@@ -13,7 +13,7 @@ public class SpellCheckTest {
     private final SpellCheck studentSolution = new SpellCheck();
     private String[] allWords, textWords, badWords;
 
-    @Test
+    @org.junit.Test
     @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
     public void testSentence() {
         setTestData("small", "sentence");
