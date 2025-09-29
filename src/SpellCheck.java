@@ -23,6 +23,8 @@ public class SpellCheck {
 
         // Create array of arrayLists - shelves for the library
 
+
+
         // Loop through the array and initialize each arrayList
 
         // Loop through each word in dictionary
@@ -44,7 +46,6 @@ public class SpellCheck {
             // Search the shelf using some algorithm
 
                 // If it's not in there add it to the list of non-correct
-
 
 
         // Return the final list
