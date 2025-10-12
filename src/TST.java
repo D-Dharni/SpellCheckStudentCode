@@ -5,7 +5,7 @@
 
 public class TST {
     // Make a node for instance variable
-    private Node root;
+    private TSTNode root;
 
     // Method to insert word into TST
     public void insertWord(String word) {
@@ -19,13 +19,13 @@ public class TST {
     }
 
     // Private helper method
-    private Node insertWordHelper(String word, Node currentNode, int characterIndex) {
+    private TSTNode insertWordHelper(String word, TSTNode currentNode, int characterIndex) {
         // Get the current word from the character
         char currentCharacter = word.charAt(characterIndex);
 
         // If there is no node yet then create one
         if (currentNode == null) {
-            currentNode = new Node();
+            currentNode = new TSTNode();
             currentNode.setC(currentCharacter);
         }
 
@@ -41,7 +41,7 @@ public class TST {
             currentNode.setRight(insertWordHelper(word, currentNode.getRight(), characterIndex));
         }
 
-        // Case 3: The current node matches the character
+        // Case 3: The current node matches the character or its the first node
         else {
             // If there are more characters keep going down middle
             if (characterIndex < word.length() - 1) {
@@ -64,13 +64,13 @@ public class TST {
         }
 
         // Call the recursive helper function
-        Node node = checkWordHelper(word, root, 0);
+        TSTNode node = checkWordHelper(word, root, 0);
 
         // Return the is terminal and the null because of base case
         return node != null && node.isTerminal();
     }
 
-    private Node checkWordHelper(String word, Node currentNode, int characterIndex) {
+    private TSTNode checkWordHelper(String word, TSTNode currentNode, int characterIndex) {
         // Base case if the current node is null
         if (currentNode == null) {
             return null;

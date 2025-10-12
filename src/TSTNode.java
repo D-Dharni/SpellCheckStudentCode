@@ -1,45 +1,21 @@
-import java.util.ArrayList;
-
 /*
     * A public class that represents a character node inside the TST structure.
      */
-public class Node {
-
+public class TSTNode {
     // Character stored at this node
     private char c;
 
     // Nodes for the surrounding characters for TST implementation
-    private Node left;
+    private TSTNode left;
 
-    private Node right;
+    private TSTNode right;
 
-    private Node middle;
+    private TSTNode middle;
 
     // Variable for is an end of a word
     private boolean isTerminal;
 
-    // Array with all the children for trie implementation
-    private Node[] children;
-
-    public Node() {
-        children = new Node[256];
-        isTerminal = false;
-    }
-
     // Getters and Setters for all Instance Variables
-
-    public Node[] getChildren() {
-        return children;
-    }
-
-    public void setChildren(Node[] children) {
-        this.children = children;
-    }
-
-    public boolean isThereChild (char character) {
-        return children[character] != null;
-    }
-
     public char getC() {
         return c;
     }
@@ -48,27 +24,27 @@ public class Node {
         this.c = c;
     }
 
-    public Node getLeft() {
+    public TSTNode getLeft() {
         return left;
     }
 
-    public void setLeft(Node left) {
+    public void setLeft(TSTNode left) {
         this.left = left;
     }
 
-    public Node getRight() {
+    public TSTNode getRight() {
         return right;
     }
 
-    public void setRight(Node right) {
+    public void setRight(TSTNode right) {
         this.right = right;
     }
 
-    public Node getMiddle() {
+    public TSTNode getMiddle() {
         return middle;
     }
 
-    public void setMiddle(Node middle) {
+    public void setMiddle(TSTNode middle) {
         this.middle = middle;
     }
 

@@ -22,12 +22,18 @@ public class SpellCheck {
         // Create TST and upload the words into it using insert
         TST dictionaryOfWords = new TST();
 
+//        // OR use Trie Structure
+//        Trie dictionaryOfWords = new Trie();
+
         for (String word: dictionary) {
             dictionaryOfWords.insertWord(word);
         }
 
         // Build TST for misspelled words
         TST misspelledWords = new TST();
+
+        // OR use Trie Structure
+//        Trie misspelledWords = new Trie();
         ArrayList<String> misspelledList = new ArrayList<>();
 
         // Loop through text
