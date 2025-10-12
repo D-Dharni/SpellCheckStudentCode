@@ -17,11 +17,9 @@ public class Trie {
         // Start at the root node of the trie
         TrieNode current = root;
 
-        // Move the word to a character array
-        char[] arrayOfLetters = word.toCharArray();
-
         // Loop through each character in the array
-        for (Character character: arrayOfLetters) {
+        for (int i = 0; i < word.length(); i++) {
+            char character = word.charAt(i);
             // Check if node has child and if not create a new node for that character
             if (!current.isThereChild(character)) {
                 TrieNode newNode = new TrieNode();
@@ -44,11 +42,9 @@ public class Trie {
         // Save the current node
         TrieNode current = root;
 
-        // Move the word to a character array
-        char[] arrayOfLetters = word.toCharArray();
-
-        // Loop through each character and check for roadblock
-        for (char character: arrayOfLetters) {
+        // Loop through each character in the array
+        for (int i = 0; i < word.length(); i++) {
+            char character = word.charAt(i);
             // Return false if the child isn't valid
             if (!current.isThereChild(character)) {
                 return false;
