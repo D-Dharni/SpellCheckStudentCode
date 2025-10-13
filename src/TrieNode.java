@@ -7,7 +7,9 @@ public class TrieNode {
     // Array with all the children for trie implementation
     private TrieNode[] children;
 
+    // Constructor
     public TrieNode() {
+        // Set to null to conserve memory storage
         children = null;
         isTerminal = false;
     }

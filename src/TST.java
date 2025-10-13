@@ -7,6 +7,11 @@ public class TST {
     // Make a node for instance variable
     private TSTNode root;
 
+    // Default
+    public TST () {
+        root = new TSTNode();
+    }
+
     // Method to insert word into TST
     public void insertWord(String word) {
         // First make sure that the word is valid

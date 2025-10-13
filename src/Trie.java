@@ -2,7 +2,7 @@ public class Trie {
     // Instance Variables
     private TrieNode root;
 
-    // Class Implementation
+    // Default
     public Trie() {
         root = new TrieNode();
     }
